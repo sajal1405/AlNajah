@@ -1,0 +1,25 @@
+{
+  "banner": "https://source.unsplash.com/800x200/?garage,car",
+  "links": [
+    {
+      "title": "Call Now",
+      "url": "tel:+971588042311"
+    },
+    {
+      "title": "WhatsApp",
+      "url": "https://wa.me/971588042311"
+    },
+    {
+      "title": "Visit Website",
+      "url": "https://alnajahautorepairing.com"
+    },
+    {
+      "title": "View Services",
+      "url": "https://alnajahautorepairing.com/services.html"
+    },
+    {
+      "title": "Get Directions",
+      "url": "https://maps.app.goo.gl/fakealnajah"
+    }
+  ]
+}
