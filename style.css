@@ -1,0 +1,236 @@
+/* Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 480px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.container.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Logos */
+.logo-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 0;
+  margin-bottom: -25px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s;
+}
+
+.container.loaded .logo-stack {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-icon {
+  max-width: 160px;
+  margin-bottom: -38px;
+  transform: scale(1);
+}
+
+.logo-text {
+  max-width: 160px;
+  height: auto;
+}
+
+/* Quick Contact */
+.quick-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 0;
+  margin-bottom: 22px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out 0.6s, transform 0.6s ease-out 0.6s;
+}
+
+.container.loaded .quick-icons {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.quick-icon {
+  display: flex;
+  padding: 8px;
+  border: 2px solid #e86830;
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Buttons */
+.buttons {
+  width: 86%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s;
+}
+
+.container.loaded .buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glow-button {
+  display: flex;
+  align-items: center;
+  padding: 11px 18px;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #ff6600, #ff3300) 1;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.glow-button:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: scale(1.01);
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  margin-right: 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-button::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 180%;
+  height: 180%;
+  background: conic-gradient(from 0deg, transparent 0%, #ff4500 25%, transparent 50%, #ff6600 75%, transparent 100%);
+  animation: rotateGlow 7s linear infinite;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.04;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glow-button span,
+.glow-button img,
+.glow-button lord-icon {
+  z-index: 1;
+  position: relative;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 8px 0px 12px;
+  font-size: 13px;
+  text-align: center;
+  background-color: #0a0a0a;
+  border-top: 2px solid #e86830;
+  z-index: 10;
+  color: #aaa;
+  line-height: 2.0em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 1s, transform 0.6s ease-out 1s;
+}
+
+.container.loaded .footer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer a {
+  color: #ff7a00;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar */
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff6600, #ff3300);
+  border-radius: 20px;
+}

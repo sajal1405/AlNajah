@@ -1,0 +1,40 @@
+{
+  "title": "Al Najah Auto Repairing",
+  "logoIcon": "assets/images/logo/IconOnly.png",
+  "logoText": "assets/images/logo/TextOnly.png",
+  "phone": "0588042311",
+  "whatsapp": "971588042311",
+  "email": "support@alnajahautorepairing.com",
+  "buttons": [
+    {
+      "label": "Get Directions",
+      "url": "https://maps.app.goo.gl/4KYV6XpBP2sZzkpt6",
+      "icon": "nav"
+    },
+    {
+      "label": "Visit Our Website",
+      "url": "https://alnajahautorepairing.com",
+      "icon": "website"
+    },
+    {
+      "label": "Leave a Google Review",
+      "url": "https://g.page/r/CdLg0X0c1BhaEBM/review",
+      "icon": "review"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/alnajah_autorepairing/",
+      "icon": "instagram"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/profile.php?viewas=100000686899395&id=61576038509540",
+      "icon": "facebook"
+    },
+    {
+      "label": "Email Us",
+      "url": "mailto:support@alnajahautorepairing.com",
+      "icon": "email"
+    }
+  ]
+}
